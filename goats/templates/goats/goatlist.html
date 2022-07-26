@@ -1,0 +1,19 @@
+{%extends 'goats/goatbase.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+<div class="row" style="margin: 0px;">
+	{%for goat in goats%}
+	<div class="col-lg-3 col-md-4 goatlist">	
+		<div class="card goat-card">
+			<div class="card-body">
+				<img src="{{goat.image.url}}" class="card-img-top list-img" alt="...">
+			</div>
+		  <div class="card-footer">
+		    <h5 class="card-title">{{goat.name}}</h5>
+		    <a href="{%url 'goat-detail' goat.id%}" class="btn btn-primary">Details</a>
+		  </div>
+		</div>
+	</div>
+	{%endfor%}
+</div>
+{%endblock content%}

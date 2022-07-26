@@ -1,0 +1,115 @@
+body{
+	background-color: #EFEFEF;
+	font-family: font-family: 'Anton', sans-serif;
+
+}
+
+
+
+
+/*------------------------------------             NAVBAR CSS        ------------------------------------------*/
+
+
+
+
+.navbar{
+	font-family: 'Montserrat', sans-serif;
+	padding: 1.5rem 0 1.5rem 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.navbar-brand{
+	font-family: 'Edu NSW ACT Foundation', cursive;
+	margin-left: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.navbar-nav{
+	margin: auto;
+}
+
+.nav-link{
+  	text-shadow: 1px 1px 1px #000000;
+  	font-size: 1.2rem;
+  	margin: 0rem .4rem 0 .4rem;
+}
+
+/*-----------------------------------              HOME PAGE            ----------------------------------------*/
+
+.carousel{
+	margin-top: 20px;
+}
+
+
+
+/*------------------------------------             CARD STYLES          -----------------------------------------*/
+.card{
+	font-size: 16px;
+	font-weight: 600;
+	background-color:#EFFFFD ;
+}
+.datetag{
+	width: 50%;
+}
+
+
+/*----------------------------------              STOCKS FILE CSS           --------------------------------------*/
+
+.card-list{
+	margin: 1px .5px 1px .5px;
+	padding: 0;
+}
+
+.card-title{
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+}
+.card-header{
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+}
+
+/*---------------------------------                 STOCKS DETAIL CSS              -----------------------------------*/
+.stock-detail{
+	background-color:#EFFFFD ;
+	width: 50%;
+	text-align: center;
+	margin: 10px auto auto auto;
+	padding-top: 4px;
+}
+.stockdetailimg{
+	width: 400px;
+	height: 400px;
+	border: 1px solid;
+	margin: auto;
+}
+
+
+/*-----------------------------------               STOCK FORM               -----------------------------------------*/
+
+legend{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.content-section{
+	background-color:#EFFFFD ;
+	margin: auto;
+	width: 50%;
+	line-height: 2;
+	padding: 20px;
+	font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+

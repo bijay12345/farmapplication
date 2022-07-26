@@ -1,0 +1,31 @@
+{%extends 'goats/goatbase.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+<div class="row" style="margin: 0px;">
+
+	<!-----------------------------------       LEFT         -------------------------->
+	<div class="col-lg-4">
+	
+	</div>
+
+	<!-----------------------------------       MIDDLE        ------------------------->
+
+	<div class="col-lg-4 goatdetail">	
+		<div class="card goat-card-detail">
+			<div class="card-body">
+				<img src="{{goat.image.url}}" class="card-img-top detailimg" alt="...">
+			</div>
+		  <div class="card-footer">
+		    <h5 class="card-title">{{goat.name}}</h5>
+		  </div>
+		</div>
+	</div>
+
+	<!-----------------------------------      RIGHT          -------------------------->
+
+	<div class="col-lg-4">
+		
+	</div>
+
+</div>
+{%endblock content%}

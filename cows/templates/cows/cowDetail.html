@@ -1,0 +1,58 @@
+
+{%extends 'cows/cowbase.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+	<div class="row">
+
+
+
+		<!-- Left section -->
+		<div class="col-lg-3 mt-4">
+			<h3>Details : </h3>
+			<hr>
+			<ul class="list-group list-group-flush">
+			  <li class="list-group-item list-group-item-primary">Age : {{cow.age}}</li>
+			  <li class="list-group-item list-group-item-primary">color : {{cow.color}}</li>
+			  <li class="list-group-item list-group-item-primary">Breed : {{cow.breed}}</li>
+			  <li class="list-group-item list-group-item-primary">Category : {{cow.get_category_display}}</li>
+			  <li class="list-group-item list-group-item-primary">Gender : {{cow.get_gender_display}}</li>
+			  <li class="list-group-item list-group-item-primary">Milk : {{cow.milkAverage}} litres/day</li>
+			</ul>
+			<hr>
+			<div class="list-group list-group-flush">
+			  <h3 class="list-group-item">{{cow.name}}'s Childs</h3>
+			  <a href="#" class="list-group-item list-group-item-action">child name and link to child detail</a>
+			</div>
+		</div>
+
+
+
+		<!-- Middle section -->
+		<div class="col-lg-6 mt-4" id="middleDetailCard">
+			<h3 class="detailimage-head">{{cow.name}}</h3>
+			<hr>
+			<div class="shadow-lg p-3 mb-5 bg-dark rounded">
+				<img src="{{cow.image.url}}" class="img-fluid detailImg" alt="...">
+			</div>
+			<hr>
+		</div>
+
+
+
+		<!-- Right Section -->
+		<div class="col-lg-3 rightSection mt-4">
+			<h3>Others: </h3>
+			<hr>
+			<ul class="list-group list-group-flush">
+			  <li class="list-group-item">An item</li>
+			  <li class="list-group-item">A second item</li>
+			  <li class="list-group-item">A third item</li>
+			  <li class="list-group-item">A fourth item</li>
+			  <li class="list-group-item">And a fifth one</li>
+			</ul>
+		</div>
+
+
+		<!-- End of sections -->
+	</div>
+{%endblock content%}

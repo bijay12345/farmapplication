@@ -1,0 +1,138 @@
+body{
+	font-family: 'Mulish', sans-serif;
+	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+.navbar-nav{
+	margin-left: 25rem;
+}
+.nav-item{
+	margin: 0px 10px 0px 10px;
+	padding: 0px 10px 0px 10px;
+	justify-content: center;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.nav-link{
+	font-size: 1.2rem;
+  	margin: 0rem .4rem 0 .4rem;
+}
+
+.row{
+	margin-right: 0px;
+}
+
+.navbar{
+	font-family: 'Montserrat', sans-serif;
+	padding: 1.5rem 0 1.5rem 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+
+.cowbody{
+	margin-top: 2rem;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+												/*COW CARD MIDDLE COL_6*/
+
+.middleCard{
+	margin-left: 0px;
+	padding: 0px;
+}
+.card-middle{
+	width: 350px;
+	height: 400px;
+	margin-top: 1rem;
+	margin-left: 1.2rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 15px;
+	text-decoration: none;
+	margin-bottom: 10px;
+}
+.img-body{
+	background-color: black;
+	border-radius: 15px;
+}
+.cardimg{
+	max-width: 300px;
+	max-height: 200px;
+	margin: 10px;
+	padding: 10px;
+}
+.cardfooter-middle{
+	text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
+											/*COW CARD COL - 3 RIGHT */
+
+/*------------------------------------------------------------------------------------------------------------------*/
+												/*COW CARD COL-3 LEFT*/ 
+
+.left-card{
+	margin: 10px 0 2px 0px;
+	border-width: 0;
+}
+
+.top-card-header{
+	display: inline-block;
+	font-weight: 600;
+}
+
+.topcardlink{
+	text-decoration: none;
+	margin-left: 20px;
+}
+
+.list-group-item{
+	font-weight: 600;
+	padding: 10px;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+											/*MEDICINE INPUT FORM SECTION*/
+
+
+.content-section{
+	width: 30rem;
+	margin-top: 10px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+
+.form-group{
+	padding: 10px 5px 10px 5px;
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------Cow DETAIL Styling -------------------------------------------------*/
+
+.detailImg{
+	height: 80%;
+	width: 80%;
+	margin: auto;
+}
+
+.detailimage-head{
+	margin: auto;
+}
+.detailImg{
+	margin-left: 3.5rem;
+}
+
+.rightSection{
+	margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
