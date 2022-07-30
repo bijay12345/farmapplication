@@ -1,5 +1,4 @@
-
-{%extends 'cows/cowbase.html'%}
+{%extends 'farmapp/base.html'%}
 {%load crispy_forms_tags%}
 {%block content%}
 	<div class="row">
@@ -44,7 +43,7 @@
 			<h3>Others: </h3>
 			<hr>
 			<ul class="list-group list-group-flush">
-			  <li class="list-group-item">An item</li>
+			  <li class="list-group-item">{{medical.name}}</li>
 			  <li class="list-group-item">A second item</li>
 			  <li class="list-group-item">A third item</li>
 			  <li class="list-group-item">A fourth item</li>

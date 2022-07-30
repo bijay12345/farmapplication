@@ -1,4 +1,4 @@
-{%extends 'cows/cowbase.html'%}
+{%extends 'farmapp/base.html'%}
 {%load crispy_forms_tags%}
 {%block content%}
 
@@ -6,47 +6,47 @@
 	<div class="row">
 
 	<!-- TOP CARD -->
-		<div class="col-lg-3 left-cow-card">
-			<div class="card left-card"style="width: 18rem; margin-left: 1rem;">
-				<div class="card-header top-card-header">
-					<a class="topcardlink" href="">Fertility activities</a>
-				</div>
-				<div class="card-body">
-					<ul class="list-group list-group-flush">
-					    <li class="list-group-item">Current Milk Price</li>
-					    <li class="list-group-item">Total Milk Customers</li>
-					    <li class="list-group-item">Total Milk Production</li>
-					    <li class="list-group-item">Total Income</li>
-					    <li class="list-group-item">Total Expenditure</li>
-						<li class="list-group-item">Total Profits</li>			    
-				  	</ul>
-				</div>
-				  
-			    <div class="card-footer">
-			    	Card footer
-			    </div>
+		<div class="col-lg-3 right-home-col">
+			<div class="milkinfo mt-4">
+				<table class="table table-info">
+				  <thead>
+				  	<h5 style="text-align: center;">Milks</h5>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Cow</th>
+				      <th scope="col">Milk</th>
+				      <th scope="col">Date</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{%for info in infos%}
+					    <tr>
+					      <th scope="row">{{forloop.counter}}</th>
+					      <td>{{info.cow.name}}</td>
+					      <td>{{info.milking}} litres</td>
+					      <td>{{info.today}}</td>
+					    </tr>
+				    {%endfor%}
+				  </tbody>
+				  <tfoot>
+				    <td colspan="3">Total</td>
+				    <td>total milk</td> 
+				  </tfoot>
+				</table>
 			</div>
-		</div>
+		</div>	
 
 	<!-- MIDDLE CARD -->
 
-		<div class="col-lg-6 middleCard">
-			<div class="row">
-				{%for cow in cows%}
-				<div class="col-lg-6">
-					<div class="card card-middle">
-						<div class="card-body img-body">
-							<div class="cardimg">
-								<img src="{{cow.image.url}}" class="card-img" alt="...">
-							</div>
-						</div>
-						<div class="card-footer cardfooter-middle">
-							<h5 class="card-title">{{cow.name}}</h5>
-							<a href="{%url 'cowdetail' cow.id %}" class="btn btn-primary middleLink">Details</a>
-						</div>
-					</div>
-				</div>
-				{%endfor%}
+		<div class="col-lg-6">
+			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+			  <div class="carousel-inner">
+			  	{%for display in displays%}
+			    <div class="carousel-item active">
+			      <img src="{{display.get_cow_display}}" class="d-block w-100" id="frontDisplay" alt="...">
+			    </div>
+			    {%endfor%}
+			  </div>
 			</div>
 		</div>
 
@@ -72,6 +72,29 @@
 			<!-- End of Bottom card -->
 	</div>
 </div>
+<hr style="margin-top:2rem;">
+
+<div class="bottom-card-home container-fluid">
+	<div class="row listrow">
+		{%for cow in cows%}
+		<div class="col-lg-3 col-md-4 cowbottom">
+			<div>
+				<div class="cow-list-img">
+					<img src="{{cow.image.url}}" class="cowImg" alt="{{cow.name}} image">
+				</div>
+				<hr style="color: grey; width: 265px; margin:1rem 0 1rem 0;">
+				<a href="{%url 'cowdetail' cow.id%}" class="cardlinks">
+					<h5>{{cow.name}}</h5>
+					<small>
+						<p class="text-faded">{{cow.milkAverage}} lt./day</p>
+					</small>
+				</a>
+			</div>
+		</div>
+		{%endfor%}
+	</div>
+</div>
+
 
 
 

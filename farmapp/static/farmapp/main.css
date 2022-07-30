@@ -1,39 +1,56 @@
 body{
-	background-color: #EFEFEF;
 	font-family: font-family: 'Anton', sans-serif;
+	margin: 1rem 2rem 0 2rem;
 
 }
-
-
 
 
 /*------------------------------------             NAVBAR CSS        ------------------------------------------*/
 
-
-
-
 .navbar{
 	font-family: 'Montserrat', sans-serif;
-	padding: 1.5rem 0 1.5rem 0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+	margin-bottom: 1rem;
 }
 
 .navbar-brand{
-	font-family: 'Edu NSW ACT Foundation', cursive;
-	margin-left: 1.5rem;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
+	font-family: 'Mochiy Pop One', sans-serif;
+	color: #D61C4E;
+	padding-left: 5rem;
 }
 
-.navbar-nav{
+.bottomnav{
 	margin: auto;
 }
 
-.nav-link{
-  	text-shadow: 1px 1px 1px #000000;
-  	font-size: 1.2rem;
-  	margin: 0rem .4rem 0 .4rem;
+.topnav{
+	position:absolute;
+	right:3px;
+	top:1px;
+	height: 4rem;
 }
+
+.dropdown-toggle{
+	border-radius: 20%;
+}
+
+
+.nav-link{
+  	font-size: 1rem;
+  	color: black;
+  	margin: 0 2px 0px 2px;
+}
+
+.homedrop{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*--------------------------------------------    BOTTOM NAVBAR        ---------------------------------------------*/
+
+.naviconbar{
+	text-align: center;
+}
+
 
 /*-----------------------------------              HOME PAGE            ----------------------------------------*/
 
@@ -41,6 +58,18 @@ body{
 	margin-top: 20px;
 }
 
+#frontDisplay{
+	border-radius: 5px;
+}
+
+.home-right-list-group{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	width: 18rem;
+}
+
+.table-info{
+	font-size: 1rem;
+}
 
 
 /*------------------------------------             CARD STYLES          -----------------------------------------*/
@@ -54,11 +83,12 @@ body{
 }
 
 
-/*----------------------------------              STOCKS FILE CSS           --------------------------------------*/
+/*----------------------------------              STOCKS LIST CSS           --------------------------------------*/
 
 .card-list{
-	margin: 1px .5px 1px .5px;
-	padding: 0;
+	width: 23.5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .card-title{
@@ -70,6 +100,7 @@ body{
 	text-transform: uppercase;
 }
 
+
 /*---------------------------------                 STOCKS DETAIL CSS              -----------------------------------*/
 .stock-detail{
 	background-color:#EFFFFD ;
@@ -78,6 +109,7 @@ body{
 	margin: 10px auto auto auto;
 	padding-top: 4px;
 }
+
 .stockdetailimg{
 	width: 400px;
 	height: 400px;
@@ -88,28 +120,71 @@ body{
 
 /*-----------------------------------               STOCK FORM               -----------------------------------------*/
 
+.stock-content{
+	margin-top: 2rem;
+	background-color:#EFFFFD ;
+	width: 30rem;
+	padding: 20px;
+	font-weight: 900;
+	border-radius: .5rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-group{
+	padding-top: .6rem;
+	margin-top: .2rem;
+}
+
+
 legend{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
+	text-align: center;
 }
 
-.content-section{
-	background-color:#EFFFFD ;
-	margin: auto;
-	width: 50%;
-	line-height: 2;
-	padding: 20px;
-	font-weight: 900;
+/*------------------------------------------      HOME PAGE        ----------------------------------------------------*/
+
+.milkinfo{
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
+.right-home-col{
+	width: 20rem;
+	margin-left: 2.5rem;
+}
+
+/*--------------------------------------------       HOME BOTTOM TABLE     --------------------------------------*/
+
+.home-bottom-table{
+	border: 1px solid;
+}
 
 
+/*--------------------------------------------              Footer          ------------------------------------------*/
 
 
+.footer{
+	text-align: center;
+	margin: 1rem;
+
+}
 
 
+/*----------------------------------------------          HOVER STYLES        -------------------------------------*/
+
+.dropdown-toggle:hover{
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.19);
+}
 
 
+.nav-link:hover{
+	font-weight: bold;
+	box-shadow: 0 2px 4px 0 rgba(255,255,255,1), 0 2px 8px 0 rgba(30,53,255,1);
+	color: blue;
+}
 
-
+.list-group-item-action:hover{
+	box-shadow: 0 2px 4px 0 rgba(255,255,255,1), 0 2px 8px 0 rgba(30,53,255,1);
+	color: blue;
+}

@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Goat
 from .forms import GoatForm,MedicineForm
+from farmapp.models import DisplayImage
 
 
 def goatadd(request):
@@ -26,8 +27,9 @@ def medicineadd(request):
 
 
 def gaotList(request):
+	displays=DisplayImage.objects.all()
 	goats=Goat.objects.all()
-	return render(request,'goats/goatlist.html',{'goats':goats})
+	return render(request,'goats/goatlist.html',{'goats':goats,'displays':displays})
 
 
 def goatDetail(request,pk):

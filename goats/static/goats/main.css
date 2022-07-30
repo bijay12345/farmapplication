@@ -1,62 +1,13 @@
-body{
-	background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );
-	font-family: 'Rubik', sans-serif;
-}
-
-
-
-/*---------------------------------                 NAVIGATION STYLES                 ------------------------------*/
-
-.navbar{
-	background-image: radial-gradient( circle farthest-corner at 11.9% 17%,  rgba(73,96,108,1) 0%, rgba(62,80,89,1) 90% );
-	font-family: 'Montserrat', sans-serif;
-	padding: 1.5rem 0 1.5rem 0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
-}
-
-.navbar-nav{
-	margin: auto;
-}
-
-.navbar-brand{
-	font-size: 1.3rem;
-	font-family: 'Kanit', sans-serif;
-}
-
-.nav-item{
-	margin: 0px 10px 0px 10px;
-	padding: 0px 10px 0px 10px;
-	font-size: 1.2rem;
-	text-shadow: 1px 1px 1px #000000;
-	font-family: 'Mulish', sans-serif;
-}
-
-.nav-link{
-	font-size: 1.2rem;
-  	margin: 0rem .4rem 0 .4rem;
-}
 
 /*------------------------------------------         GOAT LIST CARD STYLES            --------------------------------*/
-
 .card{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin: 20px 10px 10px 10px;
 }
 
 .goat-card{
 	width: 22rem;
 	height: 22rem;
 	text-align: center;
-}
-
-.card-body{
-	background-color: black;
-}
-
-.list-img{
-	max-height: 220px;
-	max-width: 300px;
 }
 
 
@@ -68,22 +19,23 @@ body{
 	text-align: center;
 }
 
+.card-body{
+	padding: 0;
+}
+
 .detailimg{
-	margin-top: 20px;
 	max-width: 100%;
 	max-height: 100%;
 
 }
 
 
-
 /*-------------------------------------                 GOAT REGISTRATION FORM            -----------------------------*/
-
 
 
 .content-section{
 	width: 40rem;
-	margin-top: 2rem;
+	margin-top: 1rem;
 	font-weight: bold;
 	font-family: 'Mulish', sans-serif;
 	line-height: 1.5;
@@ -91,4 +43,8 @@ body{
 .formHead{
 	text-align: center;
 	font-weight: bolder;
+}
+
+.form-group{
+	padding: .5rem .3rem .5rem .3rem;
 }

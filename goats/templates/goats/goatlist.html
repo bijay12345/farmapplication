@@ -1,19 +1,97 @@
-{%extends 'goats/goatbase.html'%}
+{%extends 'farmapp/base.html'%}
 {%load crispy_forms_tags%}
 {%block content%}
-<div class="row" style="margin: 0px;">
-	{%for goat in goats%}
-	<div class="col-lg-3 col-md-4 goatlist">	
-		<div class="card goat-card">
-			<div class="card-body">
-				<img src="{{goat.image.url}}" class="card-img-top list-img" alt="...">
+
+<div class="cowbody">
+	<div class="row">
+
+	<!-- TOP CARD -->
+		<div class="col-lg-3 left-cow-card">
+			<div class="card left-card"style="width: 18rem;">
+				<div class="card-header top-card-header">
+					<a class="topcardlink" href="">Fertility activities</a>
+				</div>
+				<div class="card-body">
+					<ul class="list-group list-group-flush">
+					    <li class="list-group-item">Current Milk Price</li>
+					    <li class="list-group-item">Total Milk Customers</li>
+					    <li class="list-group-item">Total Milk Production</li>
+					    <li class="list-group-item">Total Income</li>
+					    <li class="list-group-item">Total Expenditure</li>
+						<li class="list-group-item">Total Profits</li>			    
+				  	</ul>
+				</div>
+				  
+			    <div class="card-footer">
+			    	Card footer
+			    </div>
 			</div>
-		  <div class="card-footer">
-		    <h5 class="card-title">{{goat.name}}</h5>
-		    <a href="{%url 'goat-detail' goat.id%}" class="btn btn-primary">Details</a>
-		  </div>
 		</div>
+
+	<!-- MIDDLE CARD -->
+
+		<div class="col-lg-6">
+			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+			  <div class="carousel-inner">
+			  	{%for display in displays%}
+			    <div class="carousel-item active">
+			      <img src="{{display.get_goat_display}}" class="d-block w-100" id="frontDisplay" alt="...">
+			    </div>
+			    {%endfor%}
+			  </div>
+			</div>
+		</div>
+
+	<!-- BOTTOM CARD -->
+
+			<div class="col-lg-3 right-cow-card">
+				<div class="card left-card" style="width: 18rem;">
+					<div class="card-header">
+						<h3>Recent Activities</h3>
+					</div>
+					<div class="card-body">
+					  <ul class="list-group list-group-flush">
+					    <li class="list-group-item">An item</li>
+					    <li class="list-group-item">A second item</li>
+					    <li class="list-group-item">A third item</li>
+					  </ul>
+					</div>
+				  	<div class="card-footer">
+				    	Card footer
+				  	</div>
+				</div>
+			</div>
+			<!-- End of Bottom card -->
 	</div>
-	{%endfor%}
 </div>
+<hr style="margin-top:2rem;">
+
+<div class="bottom-card-home container-fluid">
+	<div class="row listrow">
+		{%for goat in goats%}
+		<div class="col-lg-3 col-md-4 cowbottom">
+			<div>
+				<div class="cow-list-img">
+					<img src="{{goat.image.url}}" class="cowImg" alt="{{goat.name}} image">
+				</div>
+				<hr style="color: grey; width: 265px; margin:1rem 0 1rem 0;">
+				<a href="{%url 'goat-detail' goat.id%}" class="cardlinks">
+					<h5>{{goat.name}}</h5>
+					<small>
+						<p class="text-faded">{{goat.breed}}</p>
+					</small>
+				</a>
+			</div>
+		</div>
+		{%endfor%}
+	</div>
+</div>
+
+
+
+
+
+
+
 {%endblock content%}
+

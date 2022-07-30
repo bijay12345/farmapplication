@@ -1,79 +1,29 @@
-body{
-	font-family: 'Mulish', sans-serif;
-	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-
-}
-
-.navbar-nav{
-	margin-left: 25rem;
-}
-.nav-item{
-	margin: 0px 10px 0px 10px;
-	padding: 0px 10px 0px 10px;
-	justify-content: center;
-	text-shadow: 1px 1px 1px #000000;
-}
-
-.nav-link{
-	font-size: 1.2rem;
-  	margin: 0rem .4rem 0 .4rem;
-}
-
-.row{
-	margin-right: 0px;
-}
-
-.navbar{
-	font-family: 'Montserrat', sans-serif;
-	padding: 1.5rem 0 1.5rem 0;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
-}
-
-.cowbody{
-	margin-top: 2rem;
-}
 
 /*-----------------------------------------------------------------------------------------------------------------*/
 												/*COW CARD MIDDLE COL_6*/
+												/*   HOME PAGE    */
 
-.middleCard{
-	margin-left: 0px;
-	padding: 0px;
-}
-.card-middle{
-	width: 350px;
-	height: 400px;
-	margin-top: 1rem;
-	margin-left: 1.2rem;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	border-radius: 15px;
-	text-decoration: none;
-	margin-bottom: 10px;
-}
-.img-body{
-	background-color: black;
-	border-radius: 15px;
-}
-.cardimg{
-	max-width: 300px;
-	max-height: 200px;
-	margin: 10px;
-	padding: 10px;
-}
-.cardfooter-middle{
-	text-align: center;
-}
+
 
 
 /*------------------------------------------------------------------------------------------------------------------*/
 											/*COW CARD COL - 3 RIGHT */
 
+											/*  HOME  PAGE   */
+
+.right-cow-card{
+	padding-left: 4.9rem;
+	margin: 1.2rem 0rem .2rem 0rem ;
+}
+
+
+
 /*------------------------------------------------------------------------------------------------------------------*/
 												/*COW CARD COL-3 LEFT*/ 
 
-.left-card{
-	margin: 10px 0 2px 0px;
+												/*    HOME PAGE     */
+.left-cow-card{
+	margin: 20px 0px 2px 0px;
 	border-width: 0;
 }
 
@@ -90,6 +40,36 @@ body{
 .list-group-item{
 	font-weight: 600;
 	padding: 10px;
+}
+
+/*------------------------------------------    BOTTOM CARD   HOME PAGE        ----------------------------------*/
+
+.bottom-card-home{
+	margin: auto;
+	width: 75rem;
+}
+
+.listrow{
+	margin: 2rem 0 2rem 0;
+}
+
+.cowbottom{
+	padding: .2rem;
+}
+
+.cow-list-img{
+	width: 100%;
+	padding: 0px;
+}
+.cowImg{
+	width: 90%;
+	height: 300px;
+	border-radius: 10px;
+}
+
+.cardlinks{
+	text-decoration: none;
+	color: black;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------*/

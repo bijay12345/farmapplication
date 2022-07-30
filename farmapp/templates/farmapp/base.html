@@ -5,15 +5,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+	<!------------------------------------------------FONT AWESOME -------------------------------------------->
+	<script src="https://kit.fontawesome.com/a34dbf6751.js" crossorigin="anonymous"></script>
+
+
 	<!-- GOOGLE FONTS IMPORTS -->
 
 	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+NSW+ACT+Foundation:wght@500&family=Montserrat:wght@500&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
 
 	<!-- Bootstrap import -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
     <!-- PROJECT CSS FILE -->
 	<link rel="stylesheet" type="text/css" href="{%static 'farmapp/main.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'cows/main.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'goats/main.css'%}">
 
 	{%if title%}
 		<title>{{title}}</title>
@@ -22,34 +31,140 @@
 	{%endif%}
 </head>
 <body>
-	<!-- NAVBAR CONTENT -->
-	 <nav class="navbar navbar-expand-lg navbar-dark">
+	<!-------------------------------------------     TOP LEVEL NAVBAR    ------------------------------------------------>
+	 <nav class="navbar navbar-expand-lg navbar-light">
 	    <div class="container-fluid">
-	      <a class="navbar-brand" href="#">Navbar</a>
+	      <a class="navbar-brand" href="{%url 'home'%}">farmz</a>
 	      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="navbar-toggler-icon"></span>
 	      </button>
+
 	      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="#">Home</a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="{%url 'cow-list'%}">Cows</a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="{%url 'goat-list'%}">Goats</a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="{%url 'stocks'%}">Stocks</a>
-	          </li>
-	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="{%url 'stockform'%}">stocks +</a>
-	          </li>
+
+	        <ul class="navbar-nav me-auto mb-2 mb-lg-0 topnav">
+	        	<li class="nav-item mt-2">
+	        		<div class="btn-group dropstart">
+					  <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					    <i class="fa-solid fa-bars"></i>
+					  </button>
+					  <ul class="dropdown-menu homedrop" style="margin-top: 2.2rem;">
+					  	 
+					    <li>
+					    	<a class="dropdown-item" href="{%url 'cowAdd'%}">
+					    		Cow<span>
+					    			<i class="fa-light fa-plus"></i>
+					    		</span>
+					    	</a>
+					    </li>
+
+					    <li>
+					    	<a class="dropdown-item" href="{%url 'goatadd'%}">
+					    		Goat
+					    		<span>
+					    			<i class="fa-light fa-plus"></i>
+					    		</span>
+					    	</a>
+					    </li>
+					    <li>
+					    	<a class="dropdown-item" href="{%url 'medicineadd'%}">
+					    	Cow-Meds
+					    	<span>
+					    		<i class="fa-thin fa-notes-medical"></i>
+					    	</span>
+						    </a>
+						</li>
+
+					    <li>
+					    	<a class="dropdown-item" href="{%url 'goatMedicine'%}">
+					    		Goat-Meds
+					    		<span>
+					    			<i class="fa-solid fa-books-medical"></i>
+					    		</span>
+					    	</a>
+					    </li>
+					  </ul>
+					</div>
+		        </li>
+	        	<li class="nav-item topnavItem">
+	        		<a class="nav-link" aria-current="page" href="">
+			           	<div class="naviconbar"><i class="fa-solid fa-user"></i></div>
+			          	<p>Profile</p>
+		      		</a>
+		        </li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+
+	  <hr>
+	  <!----------------------------                  BOTTOM LEVEL NAVBAR              ------------------>
+	  
+	  <nav class="navbar navbar-expand-lg bg-light">
+		  <div class="container-fluid">
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		      <div class="navbar-nav bottomnav">  
+		      		<li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'home'%}">
+				           	<div class="naviconbar">
+				           		<i class="fa-solid fa-house"></i>
+				           	</div>
+				          	<p>Home</p>
+			      		</a>
+			        </li>
+			        <li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'cow-list'%}">
+				           	<div class="naviconbar">
+				           		<i class="fa-solid fa-cow"></i>
+				           	</div>
+				          	<p>Cows</p>
+			      		</a>
+			        </li>
+
+			         <li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'goat-list'%}">
+				           	<div class="naviconbar">
+				           		<i class="fa-light fa-sheep"></i>
+				           	</div>
+				          	<p>Goats</p>
+			      		</a>
+			        </li>
+
+			        <li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'milkInfo'%}">
+				           	<div class="naviconbar"><i class="fa-solid fa-jar"></i></div>
+				          	<p>Milk +</p>
+			      		</a>
+			        </li>
+
+			        <li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'displays'%}">
+				           	<div class="naviconbar"><i class="fa-solid fa-camera"></i></div>
+				          	<p>Display +</p>
+			      		</a>
+			        </li>
+
+			        <li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'stockform'%}">
+				           	<div class="naviconbar"><i class="fa-solid fa-layer-group"></i></div>
+				          	<p>Stocks +</p>
+			      		</a>
+			        </li>
+
+			         <li class="nav-item">
+		        		<a class="nav-link" aria-current="page" href="{%url 'eventform'%}">
+				           	<div class="naviconbar"><i class="fa-solid fa-calendar-days"></i></div>
+				          	<p>Schedule</p>
+			      		</a>
+			        </li>
+
+		      </div>
+		    </div>
+		  </div>
+	  </nav>
+
 	{%if messages%}
 		{% for message in messages%}
 			<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
@@ -65,9 +180,22 @@
 	<div class="container-fluid">
 		{%block content%}{%endblock content%}
 	</div>
+
 	<!-- BOOTSTRAPS JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
 
 </body>
+
+<footer>
+	<div class="footer" style="text-align: center; margin-top: 15rem;">
+		<p id="copyright"></p>
+	</div>
+
+	<script>
+      document.getElementById("copyright").innerHTML = `copyright © ${new Date().getFullYear()} farmz`;
+    </script>
+</footer>
+<hr>
+
 </html>

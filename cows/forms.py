@@ -1,6 +1,9 @@
 from django import forms
-from .models import Medicine, Cow
+from .models import Medicine, Cow, CowInfo
 
+
+class DateInput(forms.DateInput):
+	input_type= 'date'
 
 class CowForm(forms.ModelForm):
 	class Meta:
@@ -10,4 +13,13 @@ class CowForm(forms.ModelForm):
 class MedicineForm(forms.ModelForm):
 	class Meta:
 		model=Medicine
-		fields=['name','price','expiration_date','quantity']
+		fields=['name','price','image','expiration_date','quantity']
+		widgets={'expiration_date': DateInput()}
+
+class CowInfoForm(forms.ModelForm):
+	class Meta:
+		model=CowInfo 
+		fields=['cow','milking','today']
+		widgets={
+		'today': DateInput()
+		}

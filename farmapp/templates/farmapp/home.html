@@ -1,4 +1,105 @@
 {%extends 'farmapp/base.html'%}
 {%block content%}
 
+<div class="home-top">
+	<div class="row">
+		<div class="col-lg-3 left-home-col">
+			<div class="list-group home-right-list-group">
+			  <h5 class="head" style="text-align: center;">Stocks</h5>
+			  {%for stock in stocks%}
+				<a href="{%url 'stocksDetail' stock.id%}" class="list-group-item list-group-item-action bg-light">
+					 <h6 style="text-transform:capitalize;font-family: 'Montserrat', sans-serif;"> {{stock.name}}
+					 	<span style="float:right; margin-right: .5rem">
+					 		<div>
+					 			Quantity = {{stock.quantity}}
+					 		</div>
+					 	</span> 
+					 </h6>
+				</a>
+			  {%endfor%}
+			</div>
+		</div>
+
+
+		<div class="col-lg-6 middle-home-col">
+			<div id="carouselExampleFade" class="carousel slide carousel-fade mt-0" data-bs-ride="carousel">
+			  <div class="carousel-inner">
+			  	{%for display in displays%}
+			    <div class="carousel-item active">
+			      <img src="{{display.get_front_display}}" class="d-block w-100" id="frontDisplay" alt="...">
+			    </div>
+			    {%endfor%}
+			  </div>
+			</div>
+		</div>
+
+		<div class="col-lg-3 right-home-col">
+			<div class="milkinfo">
+				<table class="table table-primary home-bottom-table" style="text-align: left;">
+				  <thead>
+				  	<h5 style="text-align: center;">Upcoming events</h5>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Event</th>
+				      <th scope="col">Category</th>
+				      <th scope="col">Date</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{%for schedule in futureschedules%}
+					    <tr>
+					      <th scope="row">{{forloop.counter}}</th>
+					      <td>{{schedule.eventname}}</td>
+					      <td>{{schedule.get_category_display}}</td>
+					      <td>{{schedule.date}}</td>
+					    </tr>
+				    {%endfor%}
+				  </tbody>
+				</table>
+			</div>
+
+			<div class="milkinfo">
+				<table class="table table-danger home-bottom-table" style="text-align: left;">
+				  <thead>
+				  	<h5 style="text-align: center;">Past events</h5>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">Event</th>
+				      <th scope="col">Category</th>
+				      <th scope="col">Date</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	{%for schedule in pastSchedules%}
+					    <tr>
+					      <th scope="row">{{forloop.counter}}</th>
+					      <td>{{schedule.eventname}}</td>
+					      <td>{{schedule.get_category_display}}</td>
+					      <td>{{schedule.date}}</td>
+					    </tr>
+				    {%endfor%}
+				  </tbody>
+				</table>
+			</div>
+
+
+		</div>	
+
+	</div>
+</div>
+
+<!--------------------------------------------       BOTTOM SECTION         ---------------------------------->
+
+<div class="row">
+	<div class="col-lg-6">
+		
+	</div>
+	<div class="col-lg-6">
+		
+	</div>
+</div>
+
+
+
+
 {%endblock content%}

@@ -1,0 +1,32 @@
+{%extends 'farmapp/base.html'%}
+{%load crispy_forms_tags%}
+{%block content%}
+	<div class="row">
+		{%for medicine in medicines%}
+		<div class="col-lg-3">
+			<div class="card card-middle">
+				<div class="card-header">
+					<h5 class="card-title">{{medicine.name}}
+						{%if medicine.get_validity == True%}
+						<span class="badge text-bg-warning" style="float: right;">Expired</span>
+						{%else%}
+						<span class="badge text-bg-info" style="float: right;">Applicable</span>
+						{%endif%}
+					</h5>
+					
+				</div>
+				<div class="card-body img-body">
+					<div class="cardimg">
+						<img src="{{medicine.image.url}}" class="card-img" alt="...">
+					</div>
+				</div>
+				<div class="card-footer cardfooter-middle">
+					<h5 class="card-text">{{medicine.price}}</h5>
+					<h5 class="card-text">{{medicine.quantity}}</h5>
+				</div>
+			</div>
+		</div>
+		{%endfor%}
+	</div>
+{%endblock content%}
+
